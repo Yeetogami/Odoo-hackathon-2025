@@ -1,0 +1,28 @@
+# Python bytecode cache
+backend/__pycache__/
+
+# VS Code settings (if any)
+.vscode/
+
+# Python virtual environments (if created in the root)
+.env/
+venv/
+
+# OS/Editor backups
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# Ignore Docker volumes or build artifacts (optional)
+*.log
+
+# Pytest cache
+.pytest_cache/
+
+# Byte-compiled files
+*.pyc
+*.pyo
+
+# Ignore env files if added later
+.env
