@@ -58,43 +58,57 @@ A modern, minimal question-and-answer platform built with Next.js, PostgreSQL, a
 
 ### Installation
 
-1. **Clone the repository**
-   \`\`\`bash
-   git clone <repository-url>
-   cd stackit-platform
-   \`\`\`
+1.  **Clone the repository**
+    \`\`\`bash
+    git clone <repository-url>
+    cd stackit-platform
+    \`\`\`
 
-2. **Install dependencies**
-   \`\`\`bash
-   npm install
-   \`\`\`
+2.  **Set up PostgreSQL**
+    **macOS (Homebrew):**
+    \`\`\`bash
+    brew install postgresql
+    brew services start postgresql
+    \`\`\`
 
-3. **Set up PostgreSQL**
-   \`\`\`bash
-   # Create database
-   createdb stackit
-   
-   # Create user
-   psql -c "CREATE USER stackit_user WITH PASSWORD 'password123';"
-   psql -c "GRANT ALL PRIVILEGES ON DATABASE stackit TO stackit_user;"
-   \`\`\`
+    **Windows:**
+    Download from [postgresql.org](https://www.postgresql.org/download/windows/)
 
-4. **Configure environment**
-   \`\`\`bash
-   cp .env.example .env
-   # Edit .env with your database credentials
-   \`\`\`
+    **Ubuntu/Debian:**
+    \`\`\`bash
+    sudo apt update
+    sudo apt install postgresql postgresql-contrib
+    sudo systemctl start postgresql
+    \`\`\`
 
-5. **Initialize database**
-   \`\`\`bash
-   psql -U stackit_user -d stackit -f scripts/01-create-database.sql
-   psql -U stackit_user -d stackit -f scripts/02-seed-data.sql
-   \`\`\`
+3.  **Install dependencies**
+    \`\`\`bash
+    npm install
+    \`\`\`
 
-6. **Start development server**
-   \`\`\`bash
-   npm run dev
-   \`\`\`
+4.  **Set up and Seed Database**
+    \`\`\`bash
+    # This command will drop, recreate, and seed your database
+    npm run db:reset
+    \`\`\`
+
+5.  **Configure environment**
+    \`\`\`bash
+    cp .env.example .env
+    # Edit .env with your database credentials and a strong JWT_SECRET
+    \`\`\`
+
+6.  **Optional: Add/Update Admin User**
+    \`\`\`bash
+    # Edit scripts/03-add-admin.sql to define your admin user
+    # Then run:
+    npm run db:add-admin
+    \`\`\`
+
+7.  **Start development server**
+    \`\`\`bash
+    npm run dev
+    \`\`\`
 
 Visit `http://localhost:3000` to see the application.
 
