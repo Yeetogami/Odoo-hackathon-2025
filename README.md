@@ -1,4 +1,9 @@
-# StackIt - Q&A Platform
+
+
+## Problem Statement 2 : StackIt – A Minimal Q&A Forum Platform
+
+
+
 
 A modern, minimal question-and-answer platform built with Next.js, PostgreSQL, and TypeScript. StackIt enables collaborative learning through structured knowledge sharing with a clean, user-friendly interface.
 
@@ -250,12 +255,13 @@ NODE_ENV=production
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 🆘 Support
+## Team Members
 
-For support and questions:
-- Check the troubleshooting section in SETUP.md
-- Review the API documentation
-- Open an issue on GitHub
+Team Members: 
+1. Paavas Goyal:paavassss@gmail.com
+2. Om Asanani:omasanani02@gmail.com
+3. Ruturaj Bhoite:ruturajb204@gmail.com
+4. Shivam Shrivastava: shrivastav.shivam1803@gmail.com
 
 ---
 
