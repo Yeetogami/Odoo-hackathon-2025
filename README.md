@@ -1,6 +1,6 @@
 # Odoo-hackathon-2025
 
-Problem Statement 2 :StackIt – A Minimal Q&A Forum Platform
+Problem Statement 2 : StackIt – A Minimal Q&A Forum Platform
 
 Team Members: 
 1. Paavas Goyal:paavassss@gmail.com
